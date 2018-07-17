@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "No $0 script provided"
+echo "My new build steps will go here"
+
+yum install -y vim
