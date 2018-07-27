@@ -2,7 +2,7 @@
 set -euo pipefail
 
 readonly CONF=WEB-INF/classes/application.yml
-readonly FIRSTBOOT_STAMP=/.firstboot-complete
+readonly FIRSTBOOT_STAMP=/.firstboot-config-complete
 
 # Wait for database to start then...
 while ! mysqladmin ping -h"$DATABASE_HOST" -P"$DATABASE_PORT" -u"$DATABASE_USER" -p"$DATABASE_PASSWORD" --silent; do
