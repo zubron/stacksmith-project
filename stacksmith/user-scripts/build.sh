@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Build script"
+echo "No steps required during build stage, skipping..."
