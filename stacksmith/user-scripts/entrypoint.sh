@@ -7,7 +7,7 @@ readonly FIRSTBOOT_STAMP=/.firstboot-complete
 # Wait for database to start then...
 while ! mysqladmin ping -h"$DATABASE_HOST" -P"$DATABASE_PORT" -u"$DATABASE_USER" -p"$DATABASE_PASSWORD" --silent; do
     echo "Waiting for database to become available"
-    sleep 2
+    sleep 3
 done
 echo "Database available, continuing with application configuration and deploy"
 
