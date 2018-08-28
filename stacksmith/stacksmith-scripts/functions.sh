@@ -185,3 +185,12 @@ stacksmith_get_db_parameters_env() {
 
   stacksmith_get_user_parameters_env ${required_parameters[@]}
 }
+
+stacksmith_run_user_pre_build_steps() {
+  # Check if the user has provided a pre-build step for Stacksmith.
+  # If so, execute the script using the hooks directory as the working directory.
+  if [ -f "/opt/stacksmith/user-hooks/stacksmith-pre-build.sh" ]; then
+    cd /
+    bash /opt/stacksmith/user-hooks/stacksmith-pre-build.sh
+  fi
+}
